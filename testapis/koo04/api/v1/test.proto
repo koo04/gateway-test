@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package koo04.gatewaytest.api.v1.test;
+
+option go_package = "github.com/koo04/gateway-test/internal/gen/proto/go/api/v1/test;testv1";
+
+message GetTestRequest {}
+
+message TestResponse {
+  string data = 1;
+}
+
+service TestAPIService {
+  rpc GetTest(GetTestRequest) returns (TestResponse);
+}
