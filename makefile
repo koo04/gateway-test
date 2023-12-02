@@ -17,7 +17,7 @@ serve: build
 $(TARGET): $(SRC)
 	go build $(LDFLAGS) -o bin/$(TARGET) -v main.go
 
-build: pb $(TARGET)
+build: $(TARGET)
 	@true
 
 clean:
